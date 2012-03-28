@@ -17,6 +17,9 @@
 		E828ED4A1521DC0B0016B35E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E828ED481521DC0B0016B35E /* ViewController.xib */; };
 		E828ED531521DCA20016B35E /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = E828ED521521DCA20016B35E /* iCarousel.m */; };
 		E832F04215222052007C9FD3 /* page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E832F04115222052007C9FD3 /* page.jpg */; };
+		E8668631152312280071F6D6 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E866862E152312280071F6D6 /* bg.png */; };
+		E8668632152312280071F6D6 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = E866862F152312280071F6D6 /* book.png */; };
+		E8668633152312280071F6D6 /* canvasInfoBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = E8668630152312280071F6D6 /* canvasInfoBlock.png */; };
 		E8FA311215221B5400354C09 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = E8FA311115221B5400354C09 /* page.png */; };
 		E8FA311415221D7C00354C09 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FA311315221D7C00354C09 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		E828ED511521DCA20016B35E /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		E828ED521521DCA20016B35E /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		E832F04115222052007C9FD3 /* page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page.jpg; sourceTree = "<group>"; };
+		E866862E152312280071F6D6 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		E866862F152312280071F6D6 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		E8668630152312280071F6D6 /* canvasInfoBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvasInfoBlock.png; sourceTree = "<group>"; };
 		E8FA311115221B5400354C09 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
 		E8FA311315221D7C00354C09 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -123,6 +129,9 @@
 		E8FA310F1522193100354C09 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E866862E152312280071F6D6 /* bg.png */,
+				E866862F152312280071F6D6 /* book.png */,
+				E8668630152312280071F6D6 /* canvasInfoBlock.png */,
 				E832F04115222052007C9FD3 /* page.jpg */,
 				E8FA311115221B5400354C09 /* page.png */,
 			);
@@ -183,6 +192,9 @@
 				E828ED4A1521DC0B0016B35E /* ViewController.xib in Resources */,
 				E8FA311215221B5400354C09 /* page.png in Resources */,
 				E832F04215222052007C9FD3 /* page.jpg in Resources */,
+				E8668631152312280071F6D6 /* bg.png in Resources */,
+				E8668632152312280071F6D6 /* book.png in Resources */,
+				E8668633152312280071F6D6 /* canvasInfoBlock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +285,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iCoruselTestExample/iCoruselTestExample-Prefix.pch";
 				INFOPLIST_FILE = "iCoruselTestExample/iCoruselTestExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -284,6 +297,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iCoruselTestExample/iCoruselTestExample-Prefix.pch";
 				INFOPLIST_FILE = "iCoruselTestExample/iCoruselTestExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

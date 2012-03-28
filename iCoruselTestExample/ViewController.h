@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
 
-@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
+@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate> {
+    
+}
 
 @property (nonatomic, retain) IBOutlet iCarousel *carousel;
+@property (nonatomic, retain) IBOutlet UIView *infoBlock;
 
 @end

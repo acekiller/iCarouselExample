@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iCoruselTestExample/ViewController.m"
-         timestampString = "354564588.319148"
+         timestampString = "354608747.711538"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "117"
-         endingLineNumber = "117"
+         startingLineNumber = "116"
+         endingLineNumber = "116"
          landmarkName = "-numberOfItemsInCarousel:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iCoruselTestExample/ViewController.m"
-         timestampString = "354566925.675883"
+         timestampString = "354610269.50724"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "229"
-         endingLineNumber = "229"
+         startingLineNumber = "251"
+         endingLineNumber = "251"
          landmarkName = "-carousel:itemAlphaForOffset:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,24 +34,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iCoruselTestExample/ViewController.m"
-         timestampString = "354566925.675883"
+         timestampString = "354610269.50724"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "222"
-         endingLineNumber = "222"
+         startingLineNumber = "244"
+         endingLineNumber = "244"
          landmarkName = "-carouselItemWidth:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iCoruselTestExample/ViewController.m"
-         timestampString = "354566925.675883"
+         timestampString = "354610269.50724"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "181"
-         endingLineNumber = "181"
+         startingLineNumber = "203"
+         endingLineNumber = "203"
          landmarkName = "-carousel:placeholderViewAtIndex:reusingView:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iCoruselTestExample/ViewController.m"
-         timestampString = "354566925.675883"
+         timestampString = "354610269.50724"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "163"
-         endingLineNumber = "163"
+         startingLineNumber = "185"
+         endingLineNumber = "185"
          landmarkName = "-carouselDidScroll:"
          landmarkType = "5">
       </FileBreakpoint>

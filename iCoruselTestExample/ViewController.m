@@ -12,10 +12,12 @@
 
 #define NUMBER_OF_ITEMS (IS_IPAD? 19: 12)
 #define NUMBER_OF_VISIBLE_ITEMS 10
-#define ITEM_SPACING 250.0f
+#define ITEM_SPACING 300.0f
 #define INCLUDE_PLACEHOLDERS NO
 
-@interface ViewController () <UIActionSheetDelegate>
+@interface ViewController () <UIActionSheetDelegate> {
+    BOOL scrollEndAnimation;
+}
 
 @property (nonatomic, assign) BOOL wrap;
 @property (nonatomic, retain) NSMutableArray *items;
@@ -27,11 +29,14 @@
 @synthesize carousel = _carousel;
 @synthesize wrap;
 @synthesize items;
+@synthesize infoBlock = _infoBlock;
 
 - (void)setUp
 {
 	//set up data
 	wrap = NO;
+    scrollEndAnimation = NO;
+    
 	self.items = [NSMutableArray array];
 	for (int i = 0; i < NUMBER_OF_ITEMS; i++)
 	{
@@ -43,8 +48,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    // for second commit
-	
 	[self setUp];
 	
 	//configure carousel
@@ -52,11 +55,8 @@
 	_carousel.type = iCarouselTypeRotary;
 	_carousel.perspective = -0.001;
 	_carousel.viewpointOffset = CGSizeMake(0, 0);
-//	_carousel.alpha = 0.4f;
-//	carousel.bounceDistance = 900.0f;
 	
 	[_carousel reloadData];
-	
 	[_carousel scrollToItemAtIndex:18 animated:YES];
 }
 
@@ -64,6 +64,7 @@
     _carousel.delegate = nil;
 	_carousel.dataSource = nil;
 	
+    [_infoBlock release];
     [_carousel release];
     [super dealloc];
 }
@@ -105,8 +106,6 @@
         _carousel.type = type;
         [UIView commitAnimations];
     }
-	
-	NSLog(@"Click");
 }
 
 #pragma mark -
@@ -131,7 +130,7 @@
 	//create new view if no view is available for recycling
 	if (view == nil)
 	{
-		view = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"page.jpg"]] autorelease];
+		view = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"page.png"]] autorelease];
 		[view setTag:index];
 		label = [[[UILabel alloc] initWithFrame:view.bounds] autorelease];
 		label.backgroundColor = [UIColor clearColor];
@@ -156,7 +155,30 @@
 	return INCLUDE_PLACEHOLDERS? 2: 0;
 }
 
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel {
+    if (scrollEndAnimation) {
+        [self performSelectorOnMainThread:@selector(startAnimateInfoBlock) withObject:nil waitUntilDone:NO]; 
+        scrollEndAnimation = NO;
+    }
+}
+
+- (void) startAnimateInfoBlock {
+    [UIView animateWithDuration: 0.3 animations:^{
+        self.infoBlock.alpha = 1.0;
+    }];
+}
+
+- (void) stopAnimateInfoBlock {
+    [UIView animateWithDuration: 0.3 animations:^{
+        self.infoBlock.alpha = 0.0;
+    }];
+}
+
 - (void)carouselDidScroll:(iCarousel *)carousel {
+    [self stopAnimateInfoBlock];
+    
+    scrollEndAnimation = YES;
+    
 	if ([_carousel.visibleItemViews count] != 0){
 		if (carousel.currentItemIndex <= 1) {
 			for (int i = 4; i < 10; i++) {
@@ -183,7 +205,7 @@
 	//create new view if no view is available for recycling
 	if (view == nil)
 	{
-		view = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"page.jpg"]] autorelease];
+		view = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"page.png"]] autorelease];
 		[view setTag:index];
 		label = [[[UILabel alloc] initWithFrame:view.bounds] autorelease];
 		label.backgroundColor = [UIColor clearColor];
